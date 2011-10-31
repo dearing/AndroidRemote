@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/b_launch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/launch"
+        android:onClick="b_launlaunch_n64ch" />
+
+    <ToggleButton
+        android:id="@+id/b_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="Pause"
+        android:textOn="Resume" 
+        android:onClick="b_pause"/>
+
+    <ToggleButton
+        android:id="@+id/b_fullscreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="Fullscreen"
+        android:textOn="Exit Fullscreen"
+        android:onClick="b_fullscreen" />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/b_savestate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_state"
+            android:onClick="b_savestate" />
+
+        <Button
+            android:id="@+id/b_loadstate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/load_state" 
+            android:onClick="b_loadstate"/>
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/b_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/soft_reset"
+        android:onClick="b_soft_reset" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </TableRow>
+
+    <Button
+        android:id="@+id/b_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit" 
+        android:onClick="b_exit"/>
+
+    <Button
+        android:id="@+id/b_suspend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/suspend"
+        android:onClick="b_suspend" />
+
+</TableLayout>

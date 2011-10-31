@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fullscreen">Toggle Fullscreen</string>
+    <string name="load_state">Load State</string>
+    <string name="save_state">Save State</string>
+    <string name="state">Change State Index</string>
+    <string name="launch">Launch</string>
+    <string name="soft_reset">Soft Reset</string>
+    <string name="hard_reset">Hard Reset</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="zap">Zap</string>
+    <string name="reboot">Reboot Computer</string>
+    <string name="shutdown">Shutdown Computer</string>
+    <string name="suspend">Suspend Computer</string>
+    <string name="hibernate">Hibernate</string>
+    <string name="exit">Exit</string>
+
+    
+</resources>
