@@ -2,80 +2,88 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_emu_n64"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
     <Button
         android:id="@+id/b_launch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/launch"
-        android:onClick="b_launlaunch_n64ch" />
-
+        android:onClick="launch"
+        android:text="@string/emu_n64_launch" />
+
     <ToggleButton
         android:id="@+id/b_pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ToggleButton"
+        android:onClick="pause"
+        android:text="@string/emu_n64_pause"
         android:textOff="Pause"
-        android:textOn="Resume" 
-        android:onClick="b_pause"/>
-
+        android:textOn="Resume" />
+
     <ToggleButton
         android:id="@+id/b_fullscreen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="ToggleButton"
+        android:onClick="fullscreen"
+        android:text="@string/emu_n64_fullscreen"
         android:textOff="Fullscreen"
-        android:textOn="Exit Fullscreen"
-        android:onClick="b_fullscreen" />
+        android:textOn="Exit Fullscreen" />
+		
+    <Button
+        android:id="@+id/b_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="state"
+        android:text="@string/emu_n64_state" />
 
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-
+
         <Button
             android:id="@+id/b_savestate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/save_state"
-            android:onClick="b_savestate" />
-
-        <Button
+            android:onClick="savestate"
+            android:text="@string/emu_n64_save_state" />
+			
+		<Button
             android:id="@+id/b_loadstate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/load_state" 
-            android:onClick="b_loadstate"/>
+            android:onClick="loadstate"
+            android:text="@string/emu_n64_load_state" />
 
     </TableRow>
-
+
     <Button
         android:id="@+id/b_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/soft_reset"
-        android:onClick="b_soft_reset" />
-
-    <TableRow
-        android:id="@+id/tableRow2"
+        android:onClick="soft_reset"
+        android:text="@string/emu_n64_soft_reset" />
+    
+        <Button
+        android:id="@+id/b_reset"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </TableRow>
-
+        android:layout_height="wrap_content"
+        android:onClick="hard_reset"
+        android:text="@string/emu_n64_soft_reset" />
+
     <Button
         android:id="@+id/b_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/exit" 
-        android:onClick="b_exit"/>
-
-    <Button
-        android:id="@+id/b_suspend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/suspend"
-        android:onClick="b_suspend" />
+        android:onClick="exit"
+        android:text="@string/emu_n64_exit" />
 
 </TableLayout>
