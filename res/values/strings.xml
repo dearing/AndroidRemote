@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Android Remote</string>
-	
-	<!-- main -->
-	<string name="activity_machine">Machine</string>
-	<string name="activity_app_xbmc">XBMC</string>
-	<string name="activity_emu_psx">Arbex</string>
+
+    <!-- main -->
+    <string name="activity_machine">Machine</string>
+    <string name="activity_app_xbmc">XBMC</string>
+    <string name="activity_emu_psx">Arbex</string>
     <string name="activity_emu_n64">Project64</string>
-	
-	<!-- service -->
-	<string name="service_label">Machine</string>
-	<string name="service_started">XBMC</string>
-	<string name="service_stopped">Arbex</string>
-	
-	<!-- machine -->
+
+    <!-- service -->
+    <string name="service_label">Machine</string>
+    <string name="service_started">XBMC</string>
+    <string name="service_stopped">Arbex</string>
+
+    <!-- machine -->
     <string name="machine_reboot">Reboot Computer</string>
     <string name="machine_shutdown">Shutdown Computer</string>
     <string name="machine_suspend">Suspend Computer</string>
     <string name="machine_hibernate">Hibernate</string>
-	
-	<!-- app_xbmc -->
-	<string name="app_xbmc_launch">Launch XBMC</string>
+
+    <!-- app_xbmc -->
+    <string name="app_xbmc_launch">Launch XBMC</string>
     <string name="app_xbmc_fullscreen">Fullscreen</string>
-    
-	<!-- emu_psx -->
-	<string name="emu_psx_fullscreen">Fullscreen</string>
+
+    <!-- emu_psx -->
+    <string name="emu_psx_fullscreen">Fullscreen</string>
     <string name="emu_psx_load_state1">Load State 1</string>
     <string name="emu_psx_load_state2">Load State 2</string>
     <string name="emu_psx_save_state1">Save State 1</string>
     <string name="emu_psx_save_state2">Save State 2</string>
     <string name="emu_psx_launch">Launch Arbex</string>
-	<string name="emu_psx_analog">Analog</string>
+    <string name="emu_psx_analog">Analog</string>
     <string name="emu_psx_pause">Pause</string>
     <string name="emu_psx_run">Run 2</string>
     <string name="emu_psx_sync">Sync</string>
-	<string name="emu_psx_exit">Exit Arbex</string>
-	
-	<!-- emu_n64 -->
-	<string name="emu_n64_fullscreen">Fullscreen</string>
-	<string name="emu_n64_state">Change State Index</string>
+    <string name="emu_psx_exit">Exit Arbex</string>
+
+    <!-- emu_n64 -->
+    <string name="emu_n64_fullscreen">Fullscreen</string>
+    <string name="emu_n64_state">Change State Index</string>
     <string name="emu_n64_load_state">Load State</string>
     <string name="emu_n64_save_state">Save State</string>
     <string name="emu_n64_launch">Launch</string>
@@ -48,5 +48,5 @@
     <string name="emu_n64_resume">Resume</string>
     <string name="emu_n64_exit">Exit Project64</string>
     <string name="emu_psx_escape">Escape</string>
-	
+
 </resources>

@@ -10,92 +10,104 @@ package com.dearing.remote;
 public final class R {
     public static final class attr {
     }
+
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int ic_launcher = 0x7f020000;
     }
+
     public static final class id {
-        public static final int b_analog=0x7f050011;
-        public static final int b_app_xbmc=0x7f050017;
-        public static final int b_emu_n64=0x7f050018;
-        public static final int b_emu_psx=0x7f050019;
-        public static final int b_exit=0x7f050009;
-        public static final int b_fullscreen=0x7f050003;
-        public static final int b_hibernate=0x7f050013;
-        public static final int b_launch=0x7f050001;
-        public static final int b_loadstate=0x7f050007;
-        public static final int b_loadstate1=0x7f05000e;
-        public static final int b_loadstate2=0x7f050010;
-        public static final int b_machine=0x7f050016;
-        public static final int b_pause=0x7f050002;
-        public static final int b_reboot=0x7f050014;
-        public static final int b_reset=0x7f050008;
-        public static final int b_run=0x7f05000a;
-        public static final int b_savestate=0x7f050006;
-        public static final int b_savestate1=0x7f05000d;
-        public static final int b_savestate2=0x7f05000f;
-        public static final int b_shutdown=0x7f050015;
-        public static final int b_state=0x7f050004;
-        public static final int b_suspend=0x7f050012;
-        public static final int b_sync=0x7f05000b;
-        public static final int escape=0x7f05000c;
-        public static final int tableRow1=0x7f050005;
-        public static final int textView1=0x7f050000;
-        public static final int toggleButton1=0x7f05001a;
+        public static final int b_analog = 0x7f050011;
+        public static final int b_app_xbmc = 0x7f050017;
+        public static final int b_emu_n64 = 0x7f050018;
+        public static final int b_emu_psx = 0x7f050019;
+        public static final int b_exit = 0x7f050009;
+        public static final int b_fullscreen = 0x7f050003;
+        public static final int b_hibernate = 0x7f050013;
+        public static final int b_launch = 0x7f050001;
+        public static final int b_loadstate = 0x7f050007;
+        public static final int b_loadstate1 = 0x7f05000e;
+        public static final int b_loadstate2 = 0x7f050010;
+        public static final int b_machine = 0x7f050016;
+        public static final int b_pause = 0x7f050002;
+        public static final int b_reboot = 0x7f050014;
+        public static final int b_reset = 0x7f050008;
+        public static final int b_run = 0x7f05000a;
+        public static final int b_savestate = 0x7f050006;
+        public static final int b_savestate1 = 0x7f05000d;
+        public static final int b_savestate2 = 0x7f05000f;
+        public static final int b_shutdown = 0x7f050015;
+        public static final int b_state = 0x7f050004;
+        public static final int b_suspend = 0x7f050012;
+        public static final int b_sync = 0x7f05000b;
+        public static final int escape = 0x7f05000c;
+        public static final int tableRow1 = 0x7f050005;
+        public static final int textView1 = 0x7f050000;
+        public static final int toggleButton1 = 0x7f05001a;
     }
+
     public static final class layout {
-        public static final int emu_n64=0x7f030000;
-        public static final int emu_psx=0x7f030001;
-        public static final int machine=0x7f030002;
-        public static final int main=0x7f030003;
+        public static final int emu_n64 = 0x7f030000;
+        public static final int emu_psx = 0x7f030001;
+        public static final int machine = 0x7f030002;
+        public static final int main = 0x7f030003;
+        public static final int roms_n64 = 0x7f030004;
+        public static final int roms_psx = 0x7f030005;
     }
+
     public static final class string {
-        public static final int activity_app_xbmc=0x7f040002;
-        public static final int activity_emu_n64=0x7f040004;
-        public static final int activity_emu_psx=0x7f040003;
-        /**  main 
+        public static final int activity_app_xbmc = 0x7f040002;
+        public static final int activity_emu_n64 = 0x7f040004;
+        public static final int activity_emu_psx = 0x7f040003;
+        /**
+         * main
          */
-        public static final int activity_machine=0x7f040001;
-        public static final int app_name=0x7f040000;
-        public static final int app_xbmc_fullscreen=0x7f04000d;
-        /**  app_xbmc 
+        public static final int activity_machine = 0x7f040001;
+        public static final int app_name = 0x7f040000;
+        public static final int app_xbmc_fullscreen = 0x7f04000d;
+        /**
+         * app_xbmc
          */
-        public static final int app_xbmc_launch=0x7f04000c;
-        public static final int emu_n64_exit=0x7f040022;
-        /**  emu_n64 
+        public static final int app_xbmc_launch = 0x7f04000c;
+        public static final int emu_n64_exit = 0x7f040022;
+        /**
+         * emu_n64
          */
-        public static final int emu_n64_fullscreen=0x7f040019;
-        public static final int emu_n64_hard_reset=0x7f04001f;
-        public static final int emu_n64_launch=0x7f04001d;
-        public static final int emu_n64_load_state=0x7f04001b;
-        public static final int emu_n64_pause=0x7f040020;
-        public static final int emu_n64_resume=0x7f040021;
-        public static final int emu_n64_save_state=0x7f04001c;
-        public static final int emu_n64_soft_reset=0x7f04001e;
-        public static final int emu_n64_state=0x7f04001a;
-        public static final int emu_psx_analog=0x7f040014;
-        public static final int emu_psx_escape=0x7f040023;
-        public static final int emu_psx_exit=0x7f040018;
-        /**  emu_psx 
+        public static final int emu_n64_fullscreen = 0x7f040019;
+        public static final int emu_n64_hard_reset = 0x7f04001f;
+        public static final int emu_n64_launch = 0x7f04001d;
+        public static final int emu_n64_load_state = 0x7f04001b;
+        public static final int emu_n64_pause = 0x7f040020;
+        public static final int emu_n64_resume = 0x7f040021;
+        public static final int emu_n64_save_state = 0x7f04001c;
+        public static final int emu_n64_soft_reset = 0x7f04001e;
+        public static final int emu_n64_state = 0x7f04001a;
+        public static final int emu_psx_analog = 0x7f040014;
+        public static final int emu_psx_escape = 0x7f040023;
+        public static final int emu_psx_exit = 0x7f040018;
+        /**
+         * emu_psx
          */
-        public static final int emu_psx_fullscreen=0x7f04000e;
-        public static final int emu_psx_launch=0x7f040013;
-        public static final int emu_psx_load_state1=0x7f04000f;
-        public static final int emu_psx_load_state2=0x7f040010;
-        public static final int emu_psx_pause=0x7f040015;
-        public static final int emu_psx_run=0x7f040016;
-        public static final int emu_psx_save_state1=0x7f040011;
-        public static final int emu_psx_save_state2=0x7f040012;
-        public static final int emu_psx_sync=0x7f040017;
-        public static final int machine_hibernate=0x7f04000b;
-        /**  machine 
+        public static final int emu_psx_fullscreen = 0x7f04000e;
+        public static final int emu_psx_launch = 0x7f040013;
+        public static final int emu_psx_load_state1 = 0x7f04000f;
+        public static final int emu_psx_load_state2 = 0x7f040010;
+        public static final int emu_psx_pause = 0x7f040015;
+        public static final int emu_psx_run = 0x7f040016;
+        public static final int emu_psx_save_state1 = 0x7f040011;
+        public static final int emu_psx_save_state2 = 0x7f040012;
+        public static final int emu_psx_sync = 0x7f040017;
+        public static final int machine_hibernate = 0x7f04000b;
+        /**
+         * machine
          */
-        public static final int machine_reboot=0x7f040008;
-        public static final int machine_shutdown=0x7f040009;
-        public static final int machine_suspend=0x7f04000a;
-        /**  service 
+        public static final int machine_reboot = 0x7f040008;
+        public static final int machine_shutdown = 0x7f040009;
+        public static final int machine_suspend = 0x7f04000a;
+        /**
+         * service
          */
-        public static final int service_label=0x7f040005;
-        public static final int service_started=0x7f040006;
-        public static final int service_stopped=0x7f040007;
+        public static final int service_label = 0x7f040005;
+        public static final int service_started = 0x7f040006;
+        public static final int service_stopped = 0x7f040007;
     }
 }

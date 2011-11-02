@@ -1,123 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/activity_emu_psx"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-	
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_emu_psx"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
     <Button
-        android:id="@+id/b_launch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="launch"
-        android:text="@string/emu_psx_launch" />
+            android:id="@+id/b_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="launch"
+            android:text="@string/emu_psx_launch"/>
 
     <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/b_pause"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="pause"
-            android:text="@string/emu_psx_pause" />
+                android:id="@+id/b_pause"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="pause"
+                android:text="@string/emu_psx_pause"/>
 
         <Button
-            android:id="@+id/b_run"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="run"
-            android:text="@string/emu_psx_run" />
+                android:id="@+id/b_run"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="run"
+                android:text="@string/emu_psx_run"/>
 
         <Button
-            android:id="@+id/b_sync"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="sync"
-            android:text="@string/emu_psx_sync" />
+                android:id="@+id/b_sync"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="sync"
+                android:text="@string/emu_psx_sync"/>
     </TableRow>
-
+
+
     <Button
-        android:id="@+id/b_fullscreen"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="fullscreen"
-        android:text="@string/emu_psx_fullscreen"/>
-
+            android:id="@+id/b_fullscreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="fullscreen"
+            android:text="@string/emu_psx_fullscreen"/>
+
+
     <Button
-        android:id="@+id/escape"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="escape"
-        android:text="@string/emu_psx_escape" />
-		
+            android:id="@+id/escape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="escape"
+            android:text="@string/emu_psx_escape"/>
+
     <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
         <Button
-            android:id="@+id/b_savestate1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="savestate1"
-            android:text="@string/emu_psx_save_state1" />
-
+                android:id="@+id/b_savestate1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="savestate1"
+                android:text="@string/emu_psx_save_state1"/>
+
+
         <Button
-            android:id="@+id/b_loadstate1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="loadstate1"
-            android:text="@string/emu_psx_load_state1" />
+                android:id="@+id/b_loadstate1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="loadstate1"
+                android:text="@string/emu_psx_load_state1"/>
 
     </TableRow>
-	    <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+    <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
 
         <Button
-            android:id="@+id/b_savestate2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="savestate2"
-            android:text="@string/emu_psx_save_state2" />
+                android:id="@+id/b_savestate2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="savestate2"
+                android:text="@string/emu_psx_save_state2"/>
 
 
         <Button
-            android:id="@+id/b_loadstate2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="loadstate2"
-            android:text="@string/emu_psx_load_state2" />
+                android:id="@+id/b_loadstate2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="loadstate2"
+                android:text="@string/emu_psx_load_state2"/>
 
     </TableRow>
     <Button
-        android:id="@+id/b_analog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="analog"
-        android:text="@string/emu_psx_analog" />
-        <Button
-        android:id="@+id/b_exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="exit"
-        android:text="@string/emu_psx_exit" />
+            android:id="@+id/b_analog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="analog"
+            android:text="@string/emu_psx_analog"/>
+
+    <Button
+            android:id="@+id/b_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="exit"
+            android:text="@string/emu_psx_exit"/>
 
 </TableLayout>

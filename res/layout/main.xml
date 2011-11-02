@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
 
     <Button
-        android:id="@+id/b_machine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="machine"
-        android:text="@string/activity_machine" />
-	
+            android:id="@+id/b_machine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="machine"
+            android:text="@string/activity_machine"/>
+
     <Button
-        android:id="@+id/b_app_xbmc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="app_xbmc"
-        android:text="@string/activity_app_xbmc" />
-		
+            android:id="@+id/b_app_xbmc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="app_xbmc"
+            android:text="@string/activity_app_xbmc"/>
+
     <Button
-        android:id="@+id/b_emu_n64"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-		android:onClick="emu_n64"
-        android:text="@string/activity_emu_n64" />
-
+            android:id="@+id/b_emu_n64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="emu_n64"
+            android:text="@string/activity_emu_n64"/>
+
     <Button
-        android:id="@+id/b_emu_psx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-		android:onClick="emu_psx"
-        android:text="@string/activity_emu_psx" />
-
+            android:id="@+id/b_emu_psx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="emu_psx"
+            android:text="@string/activity_emu_psx"/>
+
     <ToggleButton
-        android:id="@+id/toggleButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ToggleButton"
-		android:onClick="toggle_machine"
-        android:textOn="MATO-PC"
-        android:textOff="BLACK" />
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton"
+            android:onClick="toggle_machine"
+            android:textOn="MATO-PC"
+            android:textOff="BLACK"/>
 
 </TableLayout>
