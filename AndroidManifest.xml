@@ -26,5 +26,6 @@
         <activity android:name=".Machine"/>
         <activity android:name=".RomsN64"/>
         <activity android:name=".RomsPSX"/>
+        <activity android:name=".SettingsActivity"/>
     </application>
 </manifest>

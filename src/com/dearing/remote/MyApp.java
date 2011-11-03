@@ -2,8 +2,10 @@ package com.dearing.remote;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import java.io.*;
@@ -11,24 +13,19 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class MyApp extends Application {
-
-    private String remoteHost;
-    private int remotePort;
+    SharedPreferences preferences;
 
     public String getHost() {
-        return remoteHost;
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return preferences.getString("machine", "unknown");
     }
 
     public int getPort() {
-        return remotePort;
-    }
-
-    public void setHost(String s) {
-        remoteHost = s;
-    }
-
-    public void setPort(int p) {
-        remotePort = p;
+        // Error within preference handling for integers;
+        // PreferenceActity->EditTextPreference doesn't support numbers directly yet?
+        // This is unused at the moment.4
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return preferences.getInt("port", 6699);
     }
 
 
@@ -46,20 +43,15 @@ public class MyApp extends Application {
             return null;
         }
         try {
-            Socket socket = new Socket(remoteHost, remotePort);
-            //OutputStreamWriter out = new OutputStreamWriter(socket.getOutputStream());
-            //InputStreamReader in = new InputStreamReader(socket.getInputStream());
+            Socket socket = new Socket(getHost(), 6699);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-
             if (socket.isConnected()) {
                 //request payload
-
                 bw.write(tag);
                 bw.flush();
                 // read payload
-
                 String buffer = br.readLine();
                 br.close();
                 // return array from string dilimiter = |
@@ -83,8 +75,7 @@ public class MyApp extends Application {
         }
 
         try {
-            Socket socket = new Socket(remoteHost, remotePort);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new Socket(getHost(), 6699).getOutputStream()));
             bw.write(payload);
             bw.close();
 
@@ -95,5 +86,6 @@ public class MyApp extends Application {
         }
     }
 
+    // EOF
 }
 

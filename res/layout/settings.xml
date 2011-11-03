@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Android Remote Server">
+        <EditTextPreference
+                android:summary="hostname or ip of remote machine"
+                android:title="ars::host/ip"
+                android:key="machine"/>
+        <EditTextPreference
+                android:summary="set port number; default of 6699"
+                android:title="ars::port"
+                android:key="port"/>
+    </PreferenceCategory>
+</PreferenceScreen>

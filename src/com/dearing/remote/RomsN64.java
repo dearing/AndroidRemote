@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.*;
 
 public class RomsN64 extends ListActivity {
-
     MyApp appState;
 
     @Override

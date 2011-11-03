@@ -18,8 +18,8 @@ public class RemoteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         appState = ((MyApp) getApplicationContext());
-        appState.setHost("black");
-        appState.setPort(6699);
+        //appState.setHost("black");
+        //appState.setPort(6699);
 
     }
 
@@ -31,31 +31,23 @@ public class RemoteActivity extends Activity {
     */
 
     public void machine(View view) {
-        Intent i = new Intent(getApplicationContext(), Machine.class);
-        startActivity(i);
+        startActivity(new Intent(getApplicationContext(), Machine.class));
     }
 
     public void app_xbmc(View view) {
         appState.SendPayload("app_xbmc");
-
     }
 
     public void emu_n64(View view) {
-        Intent i = new Intent(getApplicationContext(), EmuN64.class);
-        startActivity(i);
+        startActivity(new Intent(getApplicationContext(), EmuN64.class));
     }
 
     public void emu_psx(View view) {
-        Intent i = new Intent(getApplicationContext(), EmuPSX.class);
-        startActivity(i);
+        startActivity(new Intent(getApplicationContext(), EmuPSX.class));
     }
 
-    public void toggle_machine(View view) {
-        if (appState.getHost().equals("black"))
-            appState.setHost("mato-pc");
-        else
-            appState.setHost("black");
-
+    public void open_preferences(View view) {
+        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
     }
 
 }

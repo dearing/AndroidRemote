@@ -12,8 +12,7 @@ import android.widget.Toast;
 
 public class EmuN64 extends Activity {
     public MyApp appState;
-    private static final int DIALOG_CONFIRM = 0;
-    private static final int DIALOG_STATE = 1;
+    private static final int DIALOG_STATE = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,25 +25,7 @@ public class EmuN64 extends Activity {
     @Override
     protected Dialog onCreateDialog(int id) {
         AlertDialog.Builder builder;
-        Dialog dialog = null;
         switch (id) {
-            case DIALOG_CONFIRM:
-                // do the work to define the pause Dialog
-                builder = new AlertDialog.Builder(this);
-                builder.setMessage("Confirm Request.")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                appState.SendPayload("computer_reboot");
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-                dialog = builder.create();
-                break;
             case DIALOG_STATE:
                 final CharSequence[] items = {"~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
                 builder = new AlertDialog.Builder(this);
@@ -56,12 +37,10 @@ public class EmuN64 extends Activity {
                         Toast.makeText(getApplicationContext(), "Switched to state " + items[item], Toast.LENGTH_SHORT).show();
                     }
                 });
-                dialog = builder.create();
-                break;
+                return builder.create();
             default:
-                dialog = null;
+                return null;
         }
-        return dialog;
     }
 
     /*

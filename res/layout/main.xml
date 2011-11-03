@@ -32,13 +32,11 @@
             android:onClick="emu_psx"
             android:text="@string/activity_emu_psx"/>
 
-    <ToggleButton
+    <Button
             android:id="@+id/toggleButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ToggleButton"
-            android:onClick="toggle_machine"
-            android:textOn="MATO-PC"
-            android:textOff="BLACK"/>
+            android:text="preferences"
+            android:onClick="open_preferences"/>
 
 </TableLayout>
