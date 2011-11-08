@@ -1,6 +1,9 @@
 package com.dearing.remote;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -14,19 +17,18 @@ public class RomsN64 extends ListActivity {
         appState = ((MyApp) getApplicationContext());
         String[] x = appState.RequestFiles("files_n64");
         if (x != null)
-            setListAdapter(new ArrayAdapter<String>(this, R.layout.roms_n64, x));
+            setListAdapter(new ArrayAdapter<String>(this, R.layout.roms_psx, x));
 
         ListView lv = getListView();
         lv.setTextFilterEnabled(true);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                // When clicked, show a toast with the TextView text
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 appState.SendPayload("emu_n64+" + ((TextView) view).getText());
                 Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
     }
+    //EOF
 }

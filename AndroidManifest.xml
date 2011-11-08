@@ -27,5 +27,12 @@
         <activity android:name=".RomsN64"/>
         <activity android:name=".RomsPSX"/>
         <activity android:name=".SettingsActivity"/>
+        <activity android:name=".RomsNes"/>
+        <activity android:name=".RomsNES"/>
+        <activity android:name=".RomsSNES"/>
+        <activity android:name=".RomsGBA"/>
+        <activity android:name=".EmuNES"/>
+        <activity android:name=".EmuSNES"/>
+        <activity android:name=".EmuGBA"/>
     </application>
 </manifest>

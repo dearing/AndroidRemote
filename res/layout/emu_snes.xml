@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_emu_snes"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <Button
+            android:id="@+id/b_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="launch"
+            android:text="@string/emu_snes_launch"/>
+    
+    <Button
+            android:id="@+id/b_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="pause"
+            android:text="@string/emu_snes_pause" />
+    <Button
+            android:id="@+id/b_savestate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="savestate"
+            android:text="@string/emu_snes_savestate" />
+    <Button
+            android:id="@+id/b_loadstate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="loadstate"
+            android:text="@string/emu_snes_loadstate" />
+	<Button
+            android:id="@+id/b_fullscreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="fullscreen"
+            android:text="@string/emu_snes_fullscreen" />			
+    <Button
+            android:id="@+id/b_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="reset"
+            android:text="@string/emu_snes_reset"/>
+    <Button
+            android:id="@+id/b_screenshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="screenshot"
+            android:text="@string/emu_snes_screenshot"/>
+    <Button
+            android:id="@+id/b_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="exit"
+            android:text="@string/emu_snes_exit"/>
+    </TableLayout>

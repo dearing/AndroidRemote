@@ -17,6 +17,24 @@
             android:layout_height="wrap_content"
             android:onClick="app_xbmc"
             android:text="@string/activity_app_xbmc"/>
+    <Button
+            android:id="@+id/b_emu_nes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="emu_nes"
+            android:text="@string/activity_emu_nes"/>
+    <Button
+            android:id="@+id/b_emu_snes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="emu_snes"
+            android:text="@string/activity_emu_snes"/>
+    <Button
+            android:id="@+id/b_emu_gba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="emu_gba"
+            android:text="@string/activity_emu_gba"/>
 
     <Button
             android:id="@+id/b_emu_n64"

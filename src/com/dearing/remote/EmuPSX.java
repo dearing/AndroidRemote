@@ -22,8 +22,8 @@ public class EmuPSX extends Activity {
     * =======================================================
     */
     public void launch(View view) {
-        Intent i = new Intent(getApplicationContext(), RomsPSX.class);
-        startActivity(i);
+        startActivity(new Intent(getApplicationContext(), RomsPSX.class));
+
     }
 
     public void exit(View view) {
@@ -69,4 +69,5 @@ public class EmuPSX extends Activity {
     public void analog(View view) {
         appState.SendPayload("{F11}");
     }
+    //EOF
 }

@@ -1,16 +1,11 @@
 package com.dearing.remote;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-
 public class RemoteActivity extends Activity {
-    /**
-     * Called when the activity is first created.
-     */
     public MyApp appState;
 
     @Override
@@ -18,11 +13,7 @@ public class RemoteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         appState = ((MyApp) getApplicationContext());
-        //appState.setHost("black");
-        //appState.setPort(6699);
-
     }
-
 
     /*
     * =======================================================
@@ -38,6 +29,15 @@ public class RemoteActivity extends Activity {
         appState.SendPayload("app_xbmc");
     }
 
+    public void emu_nes(View view) {
+        startActivity(new Intent(getApplicationContext(), EmuNES.class));
+    }
+    public void emu_snes(View view) {
+        startActivity(new Intent(getApplicationContext(), EmuSNES.class));
+    }
+    public void emu_gba(View view) {
+        startActivity(new Intent(getApplicationContext(), EmuGBA.class));
+    }
     public void emu_n64(View view) {
         startActivity(new Intent(getApplicationContext(), EmuN64.class));
     }
@@ -50,4 +50,5 @@ public class RemoteActivity extends Activity {
         startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
     }
 
+    //EOF
 }

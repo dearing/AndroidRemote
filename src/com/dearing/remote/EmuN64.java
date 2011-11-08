@@ -27,14 +27,21 @@ public class EmuN64 extends Activity {
         AlertDialog.Builder builder;
         switch (id) {
             case DIALOG_STATE:
-                final CharSequence[] items = {"~", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+                final CharSequence[] items = {"default", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
                 builder = new AlertDialog.Builder(this);
                 builder.setTitle("Select State Index");
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
-                        //Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
-                        appState.SendPayload(items[item].toString());
-                        Toast.makeText(getApplicationContext(), "Switched to state " + items[item], Toast.LENGTH_SHORT).show();
+
+
+                        if(items[item].equals("default")) {
+                            Toast.makeText(getApplicationContext(), "selected default state", Toast.LENGTH_SHORT).show();
+                            appState.SendPayload("~");
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "selected state " + items[item], Toast.LENGTH_SHORT).show();
+                            appState.SendPayload(items[item].toString());
+                        }
                     }
                 });
                 return builder.create();
@@ -49,8 +56,7 @@ public class EmuN64 extends Activity {
     * =======================================================
     */
     public void launch(View view) {
-        Intent i = new Intent(getApplicationContext(), RomsN64.class);
-        startActivity(i);
+        startActivity(new Intent(getApplicationContext(), RomsN64.class));
     }
 
     public void exit(View view) {

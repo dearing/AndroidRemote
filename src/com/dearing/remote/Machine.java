@@ -18,18 +18,17 @@ public class Machine extends Activity {
 
     }
 
-    private Dialog d_confirm(final String action, final String payload) {
+    private Dialog DialogConfirm(final String action, final String payload) {
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(this);
-        builder.setMessage(String.format("Confirm request for machine `%s` to %s?", appState.getHost(), action))
-                .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setMessage(String.format("Confirm request for machine `%s` to '%s'.", appState.getHost(), action))
+                .setPositiveButton(action, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         appState.SendPayload(payload);
                         finish();
                     }
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                     }
@@ -43,19 +42,26 @@ public class Machine extends Activity {
     * =======================================================
     */
     public void shutdown(View view) {
-        d_confirm("shutdown", "computer_shutdown").show();
+        DialogConfirm("shutdown", "computer_shutdown").show();
     }
 
     public void suspend(View view) {
-        d_confirm("suspend", "computer_suspend").show();
+        DialogConfirm("suspend", "computer_suspend").show();
     }
 
     public void hibernate(View view) {
-        d_confirm("hibernate", "computer_hibernate").show();
+        DialogConfirm("hibernate", "computer_hibernate").show();
     }
 
     public void reboot(View view) {
-        d_confirm("reboot", "computer_reboot").show();
+        DialogConfirm("reboot", "computer_reboot").show();
+    }
+
+    public void reload_config(View view) {
+        DialogConfirm("reload config","reload_config").show();
+    }
+    public void restart_server(View view) {
+        DialogConfirm("restart server?","restart_server").show();
     }
 
     // EOF
