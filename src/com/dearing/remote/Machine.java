@@ -8,61 +8,68 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Machine extends Activity {
-    public MyApp appState;
+	public MyApp appState;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.machine);
-        appState = ((MyApp) getApplicationContext());
+	private Dialog DialogConfirm(final String action, final String payload) {
+		AlertDialog.Builder builder;
+		builder = new AlertDialog.Builder(this);
+		builder.setMessage(
+				String.format("Confirm request for machine `%s` to '%s'.",
+						appState.getHost(), action))
+				.setPositiveButton(action,
+						new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int id) {
+								appState.SendPayload(payload);
+								finish();
+							}
+						})
+				.setNegativeButton("cancel",
+						new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						});
+		return builder.create();
+	}
 
-    }
+	public void hibernate(View view) {
+		DialogConfirm("hibernate", "computer_hibernate").show();
+	}
 
-    private Dialog DialogConfirm(final String action, final String payload) {
-        AlertDialog.Builder builder;
-        builder = new AlertDialog.Builder(this);
-        builder.setMessage(String.format("Confirm request for machine `%s` to '%s'.", appState.getHost(), action))
-                .setPositiveButton(action, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        appState.SendPayload(payload);
-                        finish();
-                    }
-                })
-                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        return builder.create();
-    }
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.machine);
+		appState = ((MyApp) getApplicationContext());
 
-    /*
-    * =======================================================
-    * 		OnClick Events
-    * =======================================================
-    */
-    public void shutdown(View view) {
-        DialogConfirm("shutdown", "computer_shutdown").show();
-    }
+	}
 
-    public void suspend(View view) {
-        DialogConfirm("suspend", "computer_suspend").show();
-    }
+	public void reboot(View view) {
+		DialogConfirm("reboot", "computer_reboot").show();
+	}
 
-    public void hibernate(View view) {
-        DialogConfirm("hibernate", "computer_hibernate").show();
-    }
+	public void reload_config(View view) {
+		DialogConfirm("reload config", "reload_config").show();
+	}
 
-    public void reboot(View view) {
-        DialogConfirm("reboot", "computer_reboot").show();
-    }
+	public void restart_server(View view) {
+		DialogConfirm("restart server?", "restart_server").show();
+	}
 
-    public void reload_config(View view) {
-        DialogConfirm("reload config","reload_config").show();
-    }
-    public void restart_server(View view) {
-        DialogConfirm("restart server?","restart_server").show();
-    }
+	/*
+	 * ======================================================= 
+	 *  OnClick Events
+	 * =======================================================
+	 */
+	public void shutdown(View view) {
+		DialogConfirm("shutdown", "computer_shutdown").show();
+	}
 
-    // EOF
+	public void suspend(View view) {
+		DialogConfirm("suspend", "computer_suspend").show();
+	}
+
+	// EOF
 }

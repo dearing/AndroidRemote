@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE manifest>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.dearing.remote"
           android:versionCode="1"
-          android:versionName="0.02">
+          android:versionName="0.10">
 
     <uses-sdk android:minSdkVersion="10"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -20,19 +21,17 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
+        </activity><activity android:name=".SettingsActivity" />
+        <activity android:name=".Machine" />
+        <activity android:name=".EmuGBA" />
         <activity android:name=".EmuN64"/>
+        <activity android:name=".EmuNES" />
         <activity android:name=".EmuPSX"/>
-        <activity android:name=".Machine"/>
-        <activity android:name=".RomsN64"/>
-        <activity android:name=".RomsPSX"/>
-        <activity android:name=".SettingsActivity"/>
-        <activity android:name=".RomsNes"/>
-        <activity android:name=".RomsNES"/>
+        <activity android:name=".EmuSNES" />
+        <activity android:name=".RomsGBA" />
+        <activity android:name=".RomsN64" />
+        <activity android:name=".RomsNES" />
+        <activity android:name=".RomsPSX" />
         <activity android:name=".RomsSNES"/>
-        <activity android:name=".RomsGBA"/>
-        <activity android:name=".EmuNES"/>
-        <activity android:name=".EmuSNES"/>
-        <activity android:name=".EmuGBA"/>
     </application>
 </manifest>

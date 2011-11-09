@@ -6,68 +6,61 @@ import android.os.Bundle;
 import android.view.View;
 
 public class EmuPSX extends Activity {
-    public MyApp appState;
+	public MyApp appState;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.emu_psx);
-        appState = ((MyApp) getApplicationContext());
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.emu_psx);
+		appState = ((MyApp) getApplicationContext());
+	}
 
-    }
+	
+	public void analog(View view) {
+		appState.SendPayload("{F11}");
+	}
 
-    /*
-    * =======================================================
-    * 		OnClick Events
-    * =======================================================
-    */
-    public void launch(View view) {
-        startActivity(new Intent(getApplicationContext(), RomsPSX.class));
+	public void escape(View view) {
+		appState.SendPayload("{ESC}");
+	}
 
-    }
+	public void exit(View view) {
+		appState.DialogConfirm(this, "exit", "Are you sure you want to exit?","%{F4}|%{F4}").show();
+	}
 
-    public void exit(View view) {
-        appState.SendPayload("%{F4}|%{F4}");
-    }
+	public void fullscreen(View view) {
+		appState.SendPayload("{F12}");
+	}
 
-    public void fullscreen(View view) {
-        appState.SendPayload("{F12}");
-    }
+	public void launch(View view) {
+		startActivity(new Intent(getApplicationContext(), RomsPSX.class));
+	}
 
-    public void escape(View view) {
-        appState.SendPayload("{ESC}");
-    }
+	public void loadstate1(View view) {
+		appState.SendPayload("{F8}");
+	}
 
-    public void savestate1(View view) {
-        appState.SendPayload("{F2}");
-    }
+	public void loadstate2(View view) {
+		appState.SendPayload("{F9}");
+	}
 
-    public void loadstate1(View view) {
-        appState.SendPayload("{F8}");
-    }
+	public void pause(View view) {
+		appState.SendPayload("{F6}");
+	}
 
-    public void savestate2(View view) {
-        appState.SendPayload("{F3}");
-    }
+	public void run(View view) {
+		appState.SendPayload("{F5}");
+	}
 
-    public void loadstate2(View view) {
-        appState.SendPayload("{F9}");
-    }
+	public void savestate1(View view) {
+		appState.SendPayload("{F2}");
+	}
 
-    public void pause(View view) {
-        appState.SendPayload("{F6}");
-    }
+	public void savestate2(View view) {
+		appState.SendPayload("{F3}");
+	}
 
-    public void sync(View view) {
-        appState.SendPayload("{F4}");
-    }
-
-    public void run(View view) {
-        appState.SendPayload("{F5}");
-    }
-
-    public void analog(View view) {
-        appState.SendPayload("{F11}");
-    }
-    //EOF
-}
+	public void sync(View view) {
+		appState.SendPayload("{F4}");
+	}
+}	//EOF

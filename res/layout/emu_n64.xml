@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TableLayout>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
@@ -20,33 +21,20 @@
             android:text="@string/emu_n64_launch"/>
 
 
-    <ToggleButton
+    <Button
             android:id="@+id/b_pause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="pause"
-            android:text="@string/emu_n64_pause"
-            android:textOff="Pause"
-            android:textOn="Resume"/>
+            android:text="@string/emu_n64_pause"/>
 
-
-    <ToggleButton
+    <Button
             android:id="@+id/b_fullscreen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:onClick="fullscreen"
-            android:text="@string/emu_n64_fullscreen"
-            android:textOff="Fullscreen"
-            android:textOn="Exit Fullscreen"/>
-
-
-    <Button
-            android:id="@+id/b_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="state"
-            android:text="@string/emu_n64_state"/>
-
+            android:text="@string/emu_n64_fullscreen"/>
+		
     <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
@@ -71,16 +59,15 @@
 
     </TableRow>
 
-
     <Button
-            android:id="@+id/b_reset"
+            android:id="@+id/b_reset_soft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="soft_reset"
             android:text="@string/emu_n64_soft_reset"/>
 
     <Button
-            android:id="@+id/b_reset"
+            android:id="@+id/b_reset_hard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="hard_reset"

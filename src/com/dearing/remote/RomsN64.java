@@ -1,34 +1,43 @@
 package com.dearing.remote;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ListActivity;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class RomsN64 extends ListActivity {
-    MyApp appState;
+	MyApp appState;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        appState = ((MyApp) getApplicationContext());
-        String[] x = appState.RequestFiles("files_n64");
-        if (x != null)
-            setListAdapter(new ArrayAdapter<String>(this, R.layout.roms_psx, x));
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		appState = ((MyApp) getApplicationContext());
+		String[] x = appState.RequestFiles("files_n64");
+		if (x != null)
+			setListAdapter(new ArrayAdapter<String>(this, R.layout.roms_psx, x));
+		else {
+			Toast.makeText(getApplicationContext(), "File list was null.",
+					Toast.LENGTH_SHORT).show();
+			finish();
+		}
 
-        ListView lv = getListView();
-        lv.setTextFilterEnabled(true);
+		ListView lv = getListView();
+		lv.setTextFilterEnabled(true);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                appState.SendPayload("emu_n64+" + ((TextView) view).getText());
-                Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
-    }
-    //EOF
+		lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				appState.SendPayload("emu_n64+" + ((TextView) view).getText());
+				Toast.makeText(getApplicationContext(),
+						((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+				finish();
+			}
+		});
+	}
+	// EOF
 }

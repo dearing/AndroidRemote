@@ -6,52 +6,46 @@ import android.os.Bundle;
 import android.view.View;
 
 public class EmuSNES extends Activity {
-    public MyApp appState;
+	public MyApp appState;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.emu_snes);
-        appState = ((MyApp) getApplicationContext());
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.emu_snes);
+		appState = ((MyApp) getApplicationContext());
 
-    }
+	}
 
-    /*
-    * =======================================================
-    * 		OnClick Events
-    * =======================================================
-    */
-    public void launch(View view) {
-        startActivity(new Intent(getApplicationContext(), RomsSNES.class));
+	public void exit(View view) {
+		appState.SendPayload("%{F4}");
+	}
 
-    }
+	public void fullscreen(View view) {
+		appState.SendPayload("%{ENTER}");
+	}
 
-    public void exit(View view) {
-        appState.SendPayload("%{F4}");
-    }
+	public void launch(View view) {
+		startActivity(new Intent(getApplicationContext(), RomsSNES.class));
+	}
 
-    public void fullscreen(View view) {
-        appState.SendPayload("%{ENTER}");
-    }
+	public void loadstate(View view) {
+		appState.SendPayload("{F2}");
+	}
 
-    public void savestate(View view) {
-        appState.SendPayload("+{F2}");
-    }
+	public void pause(View view) {
+		appState.SendPayload("+p");
+	}
 
-    public void loadstate(View view) {
-        appState.SendPayload("{F2}");
-    }
+	public void reset(View view) {
+		appState.SendPayload("+r");
+	}
 
-    public void pause(View view) {
-        appState.SendPayload("+p");
-    }
+	public void savestate(View view) {
+		appState.SendPayload("+{F2}");
+	}
 
-    public void reset(View view) {
-        appState.SendPayload("+r");
-    }
-
-    public void screenshot(View view) {
-        appState.SendPayload("{F12}");
-    }
-    //EOF
+	public void screenshot(View view) {
+		appState.SendPayload("{F12}");
+	}
+	// EOF
 }
