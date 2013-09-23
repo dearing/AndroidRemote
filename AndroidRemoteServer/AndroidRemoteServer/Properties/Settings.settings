@@ -1,0 +1,109 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AndroidRemoteServer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="emu_n64" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\emulators\Project64 1.7\Project64.exe</Value>
+    </Setting>
+    <Setting Name="emu_psx" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\emulators\xebra\arbex.exe</Value>
+    </Setting>
+    <Setting Name="n64_rom_folders" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;D:\roms\n64\&lt;/string&gt;
+  &lt;string&gt;\\mato-pc\XBMC (D)\roms\n64&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="psx_rom_folders" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;D:\roms\psx\&lt;/string&gt;
+  &lt;string&gt;\\mato-pc\XBMC (D)\roms\psx&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="psx_rom_filters" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;*.iso&lt;/string&gt;
+  &lt;string&gt;*.bin&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="n64_args" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0}"</Value>
+    </Setting>
+    <Setting Name="psx_args" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-RUN2 -FULL -IMAGE "{0}"</Value>
+    </Setting>
+    <Setting Name="host" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0.0.0.0</Value>
+    </Setting>
+    <Setting Name="port" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6699</Value>
+    </Setting>
+    <Setting Name="n64_rom_filters" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;*.zip&lt;/string&gt;
+  &lt;string&gt;*.n64&lt;/string&gt;
+  &lt;string&gt;*.v64&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="emu_nes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\emulators\nestopia\nestopia.exe</Value>
+    </Setting>
+    <Setting Name="emu_snes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\emulators\snes9x\snes9x.exe</Value>
+    </Setting>
+    <Setting Name="emu_gba" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\emulators\vba-m\vba-m.exe</Value>
+    </Setting>
+    <Setting Name="nes_rom_folders" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;D:\roms\nes\&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="snes_rom_folders" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;D:\roms\snes\&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="gba_rom_folders" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;D:\roms\gba&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="nes_rom_filters" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;*.zip&lt;/string&gt;
+  &lt;string&gt;*.nes&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="snes_rom_filters" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;*.zip&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="gba_rom_filters" Type="System.String[]" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;*.gba&lt;/string&gt;
+  &lt;string&gt;*.zip&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="nes_args" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0}"</Value>
+    </Setting>
+    <Setting Name="snes_args" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0}"</Value>
+    </Setting>
+    <Setting Name="gba_args" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">"{0}"</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
